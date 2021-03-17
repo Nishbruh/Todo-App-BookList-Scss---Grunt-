@@ -2,18 +2,63 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Project Title</title>
+	<title>My Book List</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 	<link media="all" rel="stylesheet" href="css/main.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
 	<script src="js/jquery.main.js" defer></script>
 </head>
 <body>
 	<div id="wrapper">
-		<header id="header"></header>
-		<main id="main"></main>
+		<header id="header">
+			<div class="container">
+				<div class="logo">
+					<div class="logo-icon">
+						<i class="fas fa-book-open"></i>
+					</div>
+					<div class="txt-holder">
+						<h1>My<span class="txt-blue">Book</span>list</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<section class="Book-inputs">
+				<div class="container">
+					<form action="#" class="book-form">
+						<div class="form-group">
+							<label for="title">Title</label>
+							<input type="text" id="title" name="Title">
+						</div>
+						<div class="form-group">
+							<label for="author">Author</label>
+							<input type="text" id="author" name="Author">
+						</div>
+						<div class="form-group">
+							<label for="isbn">ISBN#</label>
+							<input type="text" id="isbn" name="ISBN">
+						</div>
+						<div class="btn-holder">
+							<button class="submit-btn" type="submit">Submit</button>
+						</div>
+					</form>
+					<table class="book-table">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Author</th>
+								<th>ISBN</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody class="book-list"></tbody>
+					</table>
+				</div>
+			</section>
+		</main>
 		<footer id="footer"></footer>
 	</div>
 </body>
