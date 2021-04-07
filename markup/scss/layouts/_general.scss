@@ -1,5 +1,91 @@
 .container {
-  max-width: 1230px;
+  max-width: 560px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+#wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+a,
+button {
+  @include animate(color background transform box-shadow border opacity visibility);
+}
+
+h1,
+.h1 {
+  font-size: 50px;
+}
+
+.txt-blue {
+  color: $dark-blue;
+}
+
+input[type=text],
+input[type=number],
+button[type=submit] {
+  border-radius: 5px;
+}
+
+
+input[type=text],
+input[type=number] {
+  @include animate(border);
+  width: 100%;
+  border: 1px lighten(gray, 30%) solid;
+  padding: 15px;
+  outline: none;
+  
+  &:focus {
+    border-color: black;
+    border-radius: 5px;
+    outline: none;
+  }
+}
+
+button[type=submit] {
+  background: $dark-blue;
+  text-align: center;
+  color: $white;
+  text-transform: capitalize;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 15px 20px;
+  
+  &:hover {
+    background: darken($dark-blue, 5%);
+  }
+  
+  &:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+label {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+
+  thead {
+    border-top: 1px solid rgb(207, 207, 207);
+    border-bottom: 2px solid rgb(207, 207, 207);
+  }
+
+  th {
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
 }

@@ -30,3 +30,7 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
+@import 'layouts/general';
+@import 'layouts/header';
+@import 'layouts/common';
+@import 'layouts/footer';

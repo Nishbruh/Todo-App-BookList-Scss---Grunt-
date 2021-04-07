@@ -257,3 +257,13 @@ $animation-speed: .3s !default;
 	font-size: $pxSize;
 	font-size: ($pxSize / 10px) + rem;
 }
+
+// FLex mixin
+
+@mixin flex($horizontal: flex-start, $vertical: stretch, $wrap: wrap, $direction: row) {
+	display: flex;
+	flex-wrap: $wrap;
+	flex-direction: $direction;
+	justify-content: $horizontal;
+	align-items: $vertical;
+}
